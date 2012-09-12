@@ -15,10 +15,8 @@ apps like a boss.
 
 # Install Gus
 
-1) Get source
-2) Update $config['app_root'] values to match your server's absolute path for the application application
-3) Rage n3wbs
+- Get source
+- Update $config['app_root'] values to match your server's absolute path for the application application
+- Rage n3wbs
 
-move to come 
-
-<3 max
+move to come <3
