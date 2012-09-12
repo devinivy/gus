@@ -1,0 +1,34 @@
+html body {
+	padding:0%;
+	margin:0%;
+}
+
+body {
+	font-size:0.8em;
+	color:#000;
+	background:#FFF;
+}
+
+.pink {
+	color:#F00baa;
+}
+
+#logo {
+	font-size:225%;
+	color:#F00baa;
+}
+
+#container {
+	padding:2%;
+}
+
+#header {
+	margin-bottom:2%;
+}
+
+#footer {
+	padding:1% 0%;
+	border-top:1px dotted #CCC;
+	margin:2% 0%;
+	text-align:right;
+}
