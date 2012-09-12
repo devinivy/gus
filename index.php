@@ -33,6 +33,9 @@ $twig = new Twig_Environment($loader, array(
 $twig_vars = array(
 	'global' => "{$config['web_root']}",
 	'lib' => "{$config['web_root']}/lib",
+	'js' => "{$config['web_root']}/js",
+	'css' => "{$config['web_root']}/css",
+	'img' => "{$config['web_root']}/img",
 );
 
 // Get route specific
