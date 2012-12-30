@@ -9,8 +9,8 @@
 
 // Global Configuration
 $config = array(
-	'app_root' => "/home/maxfelker/core/httpdocs/gus",
-	'web_root' => "http://{$_SERVER['HTTP_HOST']}/gus"
+	'app_root' => ".",
+	'web_root' => "/~devinivy/gus"
 );
 
 // Require Twig Dependencies
@@ -24,7 +24,7 @@ $twig = new Twig_Environment($loader, array(
     'debug' => true
 ));
 
-/*/
+/*
  * Twig Vars are variables used in templates,
  * feel free to add to the $twig_vars array
  * 
@@ -36,10 +36,18 @@ $twig_vars = array(
 	'js' => "{$config['web_root']}/js",
 	'css' => "{$config['web_root']}/css",
 	'img' => "{$config['web_root']}/img",
+        
+        // scrubbers
+        'html' => array(),
+        'attr' => array(),
+        'url' => array()
 );
 
 // Get route specific
 require_once  "{$config['app_root']}/routing.php";
+
+// sanitize twig vars
+require_once  "{$config['app_root']}/sanitizer.php";
 
 // render the template and die
 die($twig->render('global.html', $twig_vars));

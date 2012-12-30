@@ -1,10 +1,10 @@
 <?php
 
-// grab path from script
-$web_app_suffix = str_replace("/index.php", "", $_SERVER['SCRIPT_NAME']);
+// grab path
+$page_path = explode('/', $_GET['page']);
 
-// determine route
-$route = str_replace("$web_app_suffix/", "", $_SERVER['REDIRECT_SCRIPT_URL']);
+// determine route from path
+$route = $page_path[0];
 
 // starting looking for a defined route
 switch($route) {
@@ -18,7 +18,7 @@ switch($route) {
 		
 		// set the template
 		$twig_vars['route_template'] = "home.html";
-		
+		$twig_vars['san_weiner']['name'] = array("<a href='check one'>asdasd</a>", "<!--asd-->");
 		
 	break;
 	
