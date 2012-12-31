@@ -18,7 +18,7 @@ switch($route) {
 		
 		// set the template
 		$twig_vars['route_template'] = "home.html";
-		$twig_vars['san_weiner']['name'] = array("<a href='check one'>asdasd</a>", "<!--asd-->");
+		$twig_vars['int']['name'] = array("0", 0, array("10 dogs"));
 		
 	break;
 	

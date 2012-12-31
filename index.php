@@ -1,5 +1,5 @@
 <?php
-/*/
+/*
  * Gus - the web app kickstarter
  * 
  * Welcome to the index file! Here you will find 
@@ -31,6 +31,8 @@ $twig = new Twig_Environment($loader, array(
  */
  
 $twig_vars = array(
+        
+        //paths
 	'global' => "{$config['web_root']}",
 	'lib' => "{$config['web_root']}/lib",
 	'js' => "{$config['web_root']}/js",
@@ -40,10 +42,15 @@ $twig_vars = array(
         // scrubbers
         'html' => array(),
         'attr' => array(),
-        'url' => array()
+        'url' => array(),
+        
+        // casting scrubbers
+        'int' => array(),
+        'bool' => array()
+        
 );
 
-// Get route specific
+// get route specific
 require_once  "{$config['app_root']}/routing.php";
 
 // sanitize twig vars
